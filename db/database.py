@@ -23,4 +23,10 @@ class Database:
         self.db.drop_collection(self.collection)
         self.collection.insert_many(dataset)
 
+    def executeQuery(self, filters: dict):
+        response = self.collection.find(filters)
+        pokemons = []
+        for pokemon in response:
+            pokemons.append(pokemon)
+        return pokemons
 

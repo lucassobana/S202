@@ -1,6 +1,5 @@
 from db.database import Database
 
-
 class Pokedex:
     def __init__(self):
         self.db = Database(database="pokedex", collection="pokemons")
